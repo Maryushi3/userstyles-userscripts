@@ -1,0 +1,180 @@
+/* 
+ * for left panel hiding to work in Hamsket
+ * "Inject CSS via JS should be ticked 
+ */
+
+/* ----- fixing just riot.im starts here ----- */
+/* hide "Communities" sidebar */
+.mx_LeftPanel_tagPanelContainer {
+    display: none;
+}
+
+/* enlarge font size */
+div[class*='mx_EventTile'] .markdown-body {
+    font-size: 16px;
+}
+div[class*='mx_EventTile'] {
+    font-size: 16px;
+}
+
+/* prefer default monospace font */
+.mx_EventTile_content .markdown-body code {
+    font-family: monospace, Twemoji, Apple Color Emoji, Emoji, Noto Color Emoji!important
+}
+
+/* force font to be white and download button to be bolder (by wjtk4444) */
+*:not(.mx_SenderProfile_name, mx_AccessibleButton, .mx_MFileBody_download):not(code) {
+    color: white !important;
+}
+mx_AccessibleButton,
+.mx_MFileBody_download {
+    color: #00a0ff;
+    font-weight: bold;
+}
+
+/* fix riot's code block coloring */
+.mx_EventTile_content .markdown-body code,
+.mx_EventTile_content .markdown-body pre {
+    color: inherit;
+}
+.mx_EventTile_content .markdown-body code,
+.mx_EventTile_content .markdown-body pre {
+    -webkit-filter: invert(0);
+    filter: invert(0);
+}
+.markdown-body pre {
+    background-color: inherit;
+}
+.mx_EventTile_content .markdown-body code {
+    background-color: inherit;
+}
+/* ----- fixing just riot.im ends here ----- */
+
+/* ------- hljs style should be below ------- */
+/* ----- has to contain .hljs-attribute ----- */
+
+/* 
+ * from https://github.com/Kelbster/highlightjs-material-dark-theme 
+ * (not using @import since it doesn't work with "Inject CSS via JS")
+ * -- modified to use system monospace font instead of a remote one --
+*/
+
+/*
+ * highlightjs-material-dark-theme
+ * Material Dark theme for Highlight.js
+ * Based off of https://github.com/equinusocio/material-theme
+ * For use with Highlight.js, https://github.com/isagalaev/highlight.js
+ */
+  .hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 1em;
+    background: #2B2B2D;
+    color: #CDD3D8;
+    font-family: monospace;
+    font-size: 1em;
+  }
+  .hljs > *::selection {
+    background-color: #3e4451;
+  }
+  
+  .hljs-comment {
+    color: #656565;
+    font-style: italic;
+  }
+  
+  .hljs-selector-tag {
+    color: #C792EA;
+  }
+  
+  .hljs-string,
+  .hljs-subst {
+    color: #C3E88D;
+  }
+  
+  .hljs-number,
+  .hljs-regexp,
+  .hljs-variable,
+  .hljs-template-variable {
+    color: #F77669;
+  }
+  
+  .hljs-keyword {
+    color: #C792EA;
+  }
+  .hljs-function > .hljs-title {
+    color: #75A5FF;
+  }
+  .hljs-tag {
+    color: #abb2bf;
+  }
+  .hljs-name {
+    color: #e06c75;
+  }
+  .hljs-type {
+    color: #da4939;
+  }
+  
+  .hljs-attribute {
+    color: #80CBBF;
+  }
+  
+  .hljs-symbol,
+  .hljs-bullet,
+  .hljs-built_in,
+  .hljs-builtin-name,
+  .hljs-link {
+    color: #C792EA;
+  }
+  
+  .hljs-params {
+    color: #EEFFF7;
+  }
+  
+  
+  .hljs-meta {
+    color: #75A5FF;
+  }
+  
+  .hljs-title {
+    color: #75A5FF;
+  }
+  
+  .hljs-section {
+    color: #ffc66d;
+  }
+  
+  .hljs-addition {
+    background-color: #144212;
+    color: #e6e1dc;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .hljs-deletion {
+    background-color: #600;
+    color: #e6e1dc;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .hljs-selector-class {
+    color: #FFCB68;
+  }
+  
+  .hljs-selector-id {
+    color: #F77669;
+  }
+  
+  .hljs-emphasis {
+    font-style: italic;
+  }
+  
+  .hljs-strong {
+    font-weight: bold;
+  }
+  
+  .hljs-link {
+    text-decoration: underline;
+  }
+  
